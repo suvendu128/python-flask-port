@@ -4,7 +4,6 @@ from flask_mail import Mail
 import json
 from datetime import datetime
 from flask import session
-from scipy.constants import slug
 import os
 from werkzeug.utils import secure_filename
 
