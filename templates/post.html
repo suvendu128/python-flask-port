@@ -1,0 +1,167 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<!-- Page Header -->
+<header class="masthead"
+        style="background-image: url('{{ url_for('static',filename='img/contacts.png') }}')">
+
+    <div class="container position-relative px-4 px-lg-5">
+
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+
+            <div class="col-md-10 col-lg-8 col-xl-7">
+
+                <div class="post-heading">
+
+                    <h1>{{ post.title|safe }}</h1>
+
+                    <h2 class="subheading">
+                        {{ post.tagline }}
+                    </h2>
+
+                    <span class="meta">
+                        Posted by
+                        <a href="#!">Suvendu</a>
+                        on {{ post.date }}
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!-- Post Content -->
+<!-- Post Content -->
+<article class="mb-5">
+
+    <div class="container px-4 px-lg-5">
+
+        {% if post.layout == "side" %}
+
+        <!-- PROJECT 1 : IMAGES LEFT, CONTENT RIGHT -->
+
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+
+            <div class="col-md-12 col-lg-11 col-xl-10">
+
+                <div class="row">
+
+                    <!-- LEFT SIDE : IMAGES -->
+                    <div class="col-md-5">
+
+                        {% for img in [post.image1, post.image2, post.image3, post.image4, post.image5] %}
+                        {% if img %}
+                        <div class="mb-4 text-center">
+                            <img src="{{ url_for('static', filename='img/' + img) }}"
+                                 class="img-fluid rounded shadow">
+
+                            <p class="mt-2 text-muted">
+                                Figure
+                            </p>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+
+                    </div>
+
+                    <!-- RIGHT SIDE : CONTENT -->
+                    <div class="col-md-7">
+
+                        <div style="
+                            font-size:1rem;
+                            line-height:1.6;
+                            color:#444;
+                        ">
+                            {{ post.content|safe }}
+                        </div>
+
+                    </div>
+
+                </div>
+
+                {% if post.video1 %}
+                <div class="text-center mt-5">
+
+                    <video width="80%" controls class="rounded shadow">
+                        <source src="{{ url_for('static', filename='img/' + post.video1) }}"
+                                type="video/mp4">
+                    </video>
+
+                    <p class="mt-2 text-muted">
+                        {{ post.video1_cap }}
+                    </p>
+
+                </div>
+                {% endif %}
+
+            </div>
+
+        </div>
+
+        {% else %}
+
+        <!-- PROJECT 2 : EVERYTHING CENTERED -->
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-9">
+
+                {% if post.image1 %}
+                <div class="text-center mb-5">
+
+                    <img src="{{ url_for('static', filename='img/' + post.image1) }}"
+                         class="img-fluid rounded shadow">
+
+                </div>
+                {% endif %}
+
+                <div style="
+                    font-size:1.05rem;
+                    line-height:1.9;
+                    color:#444;
+                ">
+                    {{ post.content|safe }}
+                </div>
+
+                {% if post.video1 %}
+                <div class="text-center mt-5">
+
+                    <video width="90%" controls class="rounded shadow">
+                        <source src="{{ url_for('static', filename='img/' + post.video1) }}"
+                                type="video/mp4">
+                    </video>
+
+                    <p class="mt-2 text-muted">
+                        {{ post.video1_cap }}
+                    </p>
+
+                </div>
+                {% endif %}
+
+            </div>
+
+        </div>
+
+        {% endif %}
+
+        <hr class="my-5">
+
+        <div class="text-center">
+            <p style="
+                color:#888;
+                font-size:0.95rem;
+            ">
+                Built with Flask • Python • SQL
+            </p>
+        </div>
+
+    </div>
+
+</article>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{
+    "params": {
+        "websitename": "suvendu_labs",
+        "local_server": true,
+        "blog_name": "suvenbyte",
+        "tag_line": "Python Developer | Data Analyst | SQL | Power BI | Tableau | Machine Learning | Flask | Web Development | Data Visualization | Business Intelligence",
+        "about_text": "Hi my name is harry and I create programming tutorials and I am a good boy",
+        "local_uri": "mysql://root:@localhost/techsuvee",
+        "login_image": "login.svg",
+        "prod_uri": "mysql://root:@localhost/techsuvee",
+        "LI_url": "https://www.linkedin.com/in/suvendu-sahoo-08bb5631a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+        "insta_url": "https://www.instagram.com/official.suv?igsh=MXVveTFlY2F2YWE4bA%3D%3D&utm_source=qr",
+        "no of posts": 5,
+        "admin_user": "suvendu",
+        "admin_password": "SuvendU1234",
+        "upload_location":"C:\\Users\\USER\\PycharmProjects\\flaskwebsitemaking\\static"
+    }
+}
+
+
+
+
+
