@@ -7,7 +7,7 @@
         "about_text": "Hi my name is harry and I create programming tutorials and I am a good boy",
         "local_uri": "mysql://root:@localhost/techsuvee",
         "login_image": "login.svg",
-        "prod_uri": "mysql://root:@localhost/techsuvee",
+        "prod_uri":"postgresql://techsuvee_user:jxqp9LnG3vE27HrSTxSYYARXtl8ZOx9u@dpg-d8lf0rsvikkc7384tig0-a.ohio-postgres.render.com/techsuvee",
         "LI_url": "https://www.linkedin.com/in/suvendu-sahoo-08bb5631a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
         "insta_url": "https://www.instagram.com/official.suv?igsh=MXVveTFlY2F2YWE4bA%3D%3D&utm_source=qr",
         "no of posts": 5,
