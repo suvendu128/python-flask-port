@@ -6,6 +6,11 @@ from datetime import datetime
 from flask import session
 import os
 from werkzeug.utils import secure_filename
+from flask import Flask, render_template, request, redirect
+from flask_sqlalchemy import SQLAlchemy
+
+import pymysql
+pymysql.install_as_MySQLdb()
 
 with open('config.json', 'r') as c:
     params = json.load(c)["params"]
