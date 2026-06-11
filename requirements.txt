@@ -35,7 +35,6 @@ jsonschema-specifications==2025.9.1
 kiwisolver==1.4.8
 MarkupSafe==3.0.3
 matplotlib==3.10.0
-mediapipe==0.10.21
 ml_dtypes==0.5.1
 multidict==6.7.0
 mysqlclient==2.2.8
